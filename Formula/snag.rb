@@ -1,8 +1,8 @@
 class Snag < Formula
   desc "Copy on select for macOS — automatically copies selected text to clipboard"
   homepage "https://github.com/christi4nity/snag"
-  url "https://github.com/christi4nity/snag/archive/refs/tags/v1.0.0.tar.gz"
-  sha256 "9fc2a1a05c0ab2e8c14f4497a4dc8f2124a2f14f9a9d51720574b9e07f31e730"
+  url "https://github.com/christi4nity/snag/archive/refs/tags/v1.1.0.tar.gz"
+  sha256 "b199514d957a7a72673060865fa8c9431822ec91ea99d1c8ce420f82edc67019"
   license "MIT"
 
   depends_on xcode: ["14.0", :build]
