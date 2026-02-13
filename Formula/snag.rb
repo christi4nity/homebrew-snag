@@ -1,8 +1,8 @@
 class Snag < Formula
   desc "Copy on select for macOS — automatically copies selected text to clipboard"
   homepage "https://github.com/christi4nity/snag"
-  url "https://github.com/christi4nity/snag/archive/refs/tags/v1.1.0.tar.gz"
-  sha256 "b199514d957a7a72673060865fa8c9431822ec91ea99d1c8ce420f82edc67019"
+  url "https://github.com/christi4nity/snag/archive/refs/tags/v1.2.0.tar.gz"
+  sha256 "dd8d0c2b5b890b4645b8b78ebaf74531e2f86305a3ed94517f6cb212dfa14e25"
   license "MIT"
 
   depends_on xcode: ["14.0", :build]
@@ -11,8 +11,10 @@ class Snag < Formula
   def install
     system "swift", "build", "-c", "release", "--disable-sandbox"
     mkdir_p "Snag.app/Contents/MacOS"
+    mkdir_p "Snag.app/Contents/Resources"
     cp ".build/release/Snag", "Snag.app/Contents/MacOS/Snag"
     cp "Sources/Snag/Info.plist", "Snag.app/Contents/Info.plist"
+    cp "Sources/Snag/Resources/AppIcon.icns", "Snag.app/Contents/Resources/AppIcon.icns"
     prefix.install "Snag.app"
   end
 
